@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BusyBus</title>
+
+  <link href = "style.css" type = "text/css" rel = "stylesheet">
+
+  <link rel="shortcut icon" href="fdpfav.png" type="image/x-icon">
+  <link rel="icon" href="fdpfav.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="menu-b button drawer">
+      <div class="bar1"></div>
+    </div>
+    <div class='menu'>
+      <div class="menu-b2 bar1"></div>
+      <div class="title">
+        <p>Eastbound</p>
+        <h3 class="left">Line</h3>
+        <h3 class="left">Destination</h3>
+        <h3 class="right">Frequency</h3>
+      </div>
+      <div class="content">
+        <p class="left">60</p>
+        <p class="left">Randolph/Harbor Dr</p>
+        <p class="right">Every 20 min</p>
+        <p class="left">124</p>
+        <p class="left">Navy Pier</p>
+        <p class="right">Every 10 min</p>
+      </div>
+
+    </div>
+    <div class="top">
+      <div class="notify">
+        <img class="left" src="images/nbl.png">
+        <img class="right" src="images/nbr.png">
+        <p>9:20PM</p>
+      </div>
+      <div class="head">
+        <img class="left" src="images/back.png">
+        <img class="right" src="images/info.png">
+        <h3>Washington & State</h3>
+      </div>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.447561128892!2d-87.63003778455874!3d41.8832308792217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd1e37a9237de6aad!2sState+And+Washington+Southbound+Bus+Stop!5e0!3m2!1sen!2snz!4v1521799861763" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+
+
+  <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+  <script>
+  /* HOME */
+      $(document).ready(main);
+    function main() {
+      $('.home').show();
+
+    $('.button0').on('click', function() {
+  		$('.home').show();
+      $('.menu').slideToggle("slow").hide();
+      $(".button4").show();
+  	});
+  }
+  </script>
+  <script>
+  /* SLIDE BUTTON */
+    $(document).ready(main);
+  function main() {
+    $('.menu').hide();
+    $(".button5").hide();
+
+    $('.slide-right').on('click', function() {
+    $('#1').one().show().animate({width: "100%"});
+  	});
+    $('.slide-right').on('click', function() {
+    $('#2').one().show().animate({width: "100%"});
+  	});
+    $('.slide-right').on('click', function() {
+    $('#3').one().show().animate({width: "100%"});
+  	});
+   };
+  </script>
+
+  <script>
+  /* MENU BUTTON */
+  $(document).ready(main);
+  function main() {
+    $('.menu').hide();
+
+    $('.menu-b').on('click', function() {
+      $('.menu').slideToggle();
+      $('.menu-b').hide();
+      $('.menu-b2').show();
+    });
+    $('.menu-b2').on('click', function() {
+      $('.menu').slideToggle();
+      $('.menu-b').show();
+    });
+
+  }
+  </script>
+  <script>
+  /* ABOUT BUTTON */
+    $(document).ready(main);
+  function main() {
+    $('.about-drawer').hide();
+
+    $('.button1').on('click', function() {
+      $('.about-drawer').slideToggle(400).toggleClass('active').show();
+      $('.menu').slideDown(400).hide();
+      $(".button4").show();
+      $(".button5").hide();
+      $('.home').hide();
+  	});
+    $('.button0').on('click', function() {
+  		$('.about-drawer').hide();
+  	});
+    $('.button2').on('click', function() {
+  		$('.about-drawer').hide();
+  	});
+    $('.button3').on('click', function() {
+  		$('.about-drawer').hide();
+  	});
+  }
+  </script>
+
+</body>
+</html>
