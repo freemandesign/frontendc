@@ -205,6 +205,9 @@ header {
       max-width: 768px;
       max-height: 1024px;
   }
+  .middle-t {
+    margin: 11px 0 5px 150px;
+  }
   .middle {
     float: left;
     margin: 11px 0 5px 150px;
