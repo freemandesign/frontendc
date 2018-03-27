@@ -1,13 +1,10 @@
-* {
-    max-width: 375px;
-    max-height: 667px;
-}
-
-
 html {
   height: 100%;
   background-color: #fff;
   display: inline;
+  margin: 0 auto;
+  max-width: 375px;
+  max-height: 667px;
 }
 
 body {
@@ -17,10 +14,10 @@ body {
   background: grey;
 }
 table{
-  margin: 0 22px;
-}
-th {
-  text-align: left;
+  width: 100%;
+  margin: 0;
+  margin-top: 20px;
+  border-spacing: 0;
 }
 p {
   font-size: 1rem;
@@ -30,7 +27,9 @@ p {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
-
+section {
+  height: 100%;
+}
 .body {
   height: auto;
   padding: 10px 10px 0 10px;
@@ -40,27 +39,15 @@ h1, h2, h3, h4, h5, h6 {
 
 nav {
   width: 100%;
-  height: 80%;
+  height: 70%;
   padding: 0;
-  z-index: 99999999999999;
   background: #fff;
   position: absolute;
   display: block;
   bottom: 0;
   border-radius: 6px 6px 0 0;
   overflow: scroll;
-}
-
-.button {
-  margin: 0;
-  border-radius: 6px 6px 0 0;
-  position: absolute;
-  display: block;
-  color: #fff;
-  bottom: 0;
-  width: 100%;
-  background: white;
-  z-index: 9999999999;
+  z-index: 100;
 }
 .bar {
   width: 100%;
@@ -110,10 +97,11 @@ header {
   float: left;
 }
 .left-t {
-    float: left;
-    width: 60px;
-    margin: 11px 0 5px 16px;
+  float: left;
+  width: 60px;
+  margin: 11px 0 5px 16px;
 }
+
 .left {
   float: left;
   width: 60px;
@@ -170,19 +158,30 @@ header {
 }
 .title {
   width: 100%;
-  height: 70px;
+  height: 20px;
   background-color: #EFEFF4;
-  padding-top: 10px;
+  display: block
 }
 .top {
   padding-top: 30px;
 }
-.title > h5 {
+.title > th {
   color: #919191;
-  margin-top: 20px;
+  margin-top: 0;
   text-transform: uppercase;
   font-size: .8rem;
-  letter-spacing: -0.62%;
+  font-weight: 400;
+}
+.title-large {
+  width: 100%;
+  height: 40px;
+  background-color: #EFEFF4;
+  display: block;
+}
+.title-large > th {
+  color: #919191;
+  font-size: 1rem;
+  width: 140px;
 }
 .title > h3 {
   margin: 0 16px;
@@ -199,26 +198,4 @@ header {
 }
 .content > p > .left {
   color: #000;
-}
-@media(min-width: 760px) {
-  * {
-      max-width: 768px;
-      max-height: 1024px;
-  }
-  .middle-t {
-    margin: 11px 0 5px 150px;
-  }
-  .middle {
-    float: left;
-    margin: 11px 0 5px 150px;
-  }
-  .bar1 {
-    width: 35px;
-    height: 5px;
-    background-color: #967f7f;
-    margin: 8px 0;
-    position: absolute;
-    border-radius: 5px;
-    left: 47%;
-  }
 }
